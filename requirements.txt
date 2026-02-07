@@ -1,0 +1,9 @@
+# Stock Fundamental Analysis Tool - Dependencies
+# Python 3.8+ required
+
+# Core dependencies
+pandas>=2.0.0
+yfinance>=0.2.30
+
+# Optional: For better performance
+# numpy>=1.24.0
