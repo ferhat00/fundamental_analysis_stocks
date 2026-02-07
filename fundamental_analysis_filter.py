@@ -607,7 +607,7 @@ def main():
     """Main entry point for the application."""
     print("=" * 70)
     print("Stock Fundamental Analysis Tool - Modernized 2026 Version")
-    print("=\" * 70)
+    print("=" * 70)
     print()
     
     # Configure application
