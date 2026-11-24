@@ -69,6 +69,23 @@ The tool fetches 30+ fundamental metrics including:
 **Cash Flow**: Free Cash Flow per Share, Dividends, Payout Ratio  
 **Valuation**: Book Value per Share, Shares Outstanding
 
+
+## Market timing near all-time highs (`market_timing/`)
+
+A literature review and backtest of indicators for banking gains into cash when the S&P 500 is at or near all-time highs. The cash band is 0–40%, reviewed monthly.
+
+- **Report:** [`research/market_highs_cash_allocation.md`](research/market_highs_cash_allocation.md). It covers the literature, the evidence table, backtests, the cash rule, cycle and horizon guidance, and references.
+- **Notebook:** [`market_top_analysis.ipynb`](market_top_analysis.ipynb). It reproduces every chart and table.
+
+```bash
+python -m market_timing.signal_today --portfolio-value 100000 --current-cash 0.05   # today's dashboard & cash %
+python -m market_timing.backtest                                                    # full study -> output/market_timing/*.csv
+python -m market_timing.build_notebook && jupyter nbconvert --execute --to notebook --inplace market_top_analysis.ipynb
+pytest tests/test_market_timing.py -q
+```
+
+Data comes from Shiller, Ken French, FRED (no API key needed) and Yahoo, cached under `data/cache/`. Educational use only; not financial advice.
+
 ## Configuration
 
 ### Adjusting Parallel Workers

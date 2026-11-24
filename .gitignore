@@ -105,3 +105,6 @@ venv.bak/
 *.png
 AEM_deep_analysis.html
 GSK_L_deep_analysis.html
+
+# market_timing data cache (re-downloaded automatically)
+data/cache/
